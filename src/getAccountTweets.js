@@ -18,7 +18,7 @@ module.exports = function getAccountTweets(account, keys, options) {
 
 	if (options.file) {
 		return util.getFirstTweetFromJsonFile(options.file).then(function(id) {
-			console.log('Since Id', id);
+			console.log('Gettting new tweets since tweets Id: ', id);
 			params.since_id = id;
 
 			return timelineWalker(client, params)

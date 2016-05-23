@@ -16,7 +16,7 @@ twitterCorpus(
     path.join(__dirname, './input/twitterAccountName.json'),
     path.join(__dirname, './input/anyFile.txt'),
   ],
-	path.join(__dirname, './output.txt'),
+  path.join(__dirname, './output.txt'),
   {
     account: 'twitterAccountName',
     consumer_key: '******',
