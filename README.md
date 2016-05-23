@@ -42,10 +42,24 @@ var twitterCorpus = require('twitter-ebooks-corpus-builder');
 twitterCorpus(inputs[, output][, options])
 ```
 * **inputs** - required
-  absolute path to file, absolute path to directory, or array of absolute paths or directories.
+  - absolute path to file, absolute path to directory, or array of absolute paths or directories.
 * **output** - optional
-  final corpus output. Defaults to `output.txt` in the directory of your script
+  - final corpus output. Defaults to `output.txt` in the directory of your script
 * **options** - optional
-  if output is null options may be passed in 3rd
-  this is for the twitter api authentication. all 5 are required if you wish to backup the twitter account:
+  - if output is null options may be passed in 3rd
+  - this is for the twitter api authentication. all 5 are required if you wish to backup the twitter account:
   `account`, `consumer_key`, `consumer_secret`, `access_token_key`, `access_token_secret`
+
+Input File Types
+=====
+
+### CSV
+Assumes a twitter archive csv in which the text data is at index 5. Will properally process any csv which the data is at index 5.
+
+### JSON
+Assumes a single or array of twitter status objects. Will process any json where the data is on the key of `text`.
+
+### TXT
+any flat file where each line is to used in it's entirety
+
+
