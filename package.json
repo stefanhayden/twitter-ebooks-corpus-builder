@@ -1,7 +1,7 @@
 {
-  "name": "Twitter eBooks Corpus Builder",
+  "name": "twitter-ebooks-corpus-builder",
   "version": "1.0.0",
-  "description": "",
+  "description": "Accepts json, csv, and txt input and after backing up a twitter account will create a single txt corpus best for eBooks twitter bot use.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
