@@ -18,7 +18,7 @@ twitterCorpus(
   ],
 	path.join(__dirname, './output.txt'),
   {
-		account: 'twitterAccountName',
+    account: 'twitterAccountName',
     consumer_key: '******',
     consumer_secret: '******',
     access_token_key: '******',
