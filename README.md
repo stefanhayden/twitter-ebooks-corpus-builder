@@ -1,7 +1,7 @@
 Twitter eBooks Corpus Builder
 =======
 
-Accepts json, csv, and txt input and after backing up a twitter account will create a single txt corpus best for eBook    s twitter bot use.
+Accepts json, csv, and txt input and after optionally backing up a twitter account will create a single txt corpus best for eBooks twitter bot use.
 
 Quick Start
 =======
