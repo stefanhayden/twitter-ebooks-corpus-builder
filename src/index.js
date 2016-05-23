@@ -3,12 +3,8 @@ var fs = require('fs');
 var util = require('./utils.js')
 var getNewTweets = require('./getNewTweets.js')
 
-module.exports = function(account, input, output, options) {
+module.exports = function(input, output, options) {
 	var outputFile;
-
-	if(!account) {
-		throw 'please provided an account name so we can auto archive account'
-	}
 
 	//let options be passed in 3rd if they just want default output file
 	if (typeof output === 'object') {
@@ -22,8 +18,10 @@ module.exports = function(account, input, output, options) {
 
 	if(path.parse(output).ext) {
 		outputFile = output;
+	} else if (options.account) {
+		outputFile = path.join(output, options.account + '_output.txt')
 	} else {
-		outputFile = path.join(output, account + '_output.txt')
+		outputFile = path.join(output, 'output.txt')
 	}
 
 	if (typeof input === 'string') {	
@@ -34,7 +32,7 @@ module.exports = function(account, input, output, options) {
 
 	var files = util.inputsToFileArray(input);
 
-	getNewTweets(account, files, options).then(() => {
+	getNewTweets(files, options).then(() => {
 		writeToOutput(files, outputFile)
 	});
 
