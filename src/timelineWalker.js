@@ -7,7 +7,7 @@ module.exports = function timelineWalker(client, params, allTweets) {
 
 		client.get('statuses/user_timeline', params, function(error, tweets, response){
 			if (error) {
-				throw 'Error getting timeline tweets for: ' + account;
+				throw error.message;
 			}
 
 			if (tweets.length === 0) {
