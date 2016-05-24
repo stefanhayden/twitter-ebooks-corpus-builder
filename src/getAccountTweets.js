@@ -45,6 +45,7 @@ module.exports = function getAccountTweets(account, keys, options) {
 	} else {
 		return timelineWalker(client, params).then(function(data) {
 			console.log('do somethig with '+data.length+' tweets')
+			return writeCombinedJsonFile([data], account + '.json');
 		});
 	}
 }
