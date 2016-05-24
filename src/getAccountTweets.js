@@ -2,6 +2,7 @@ var timelineWalker = require('./timelineWalker.js');
 var writeCombinedJsonFile = require('json-stream-combiner')
 var Twitter = require('twitter');
 var util = require('./utils.js')
+var fs = require('fs');
 
 module.exports = function getAccountTweets(account, keys, options) {
 	var client = new Twitter({
